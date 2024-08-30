@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    extend: {
     colors: {
       blue: {
         'hyper': '#005fa0',
@@ -12,7 +13,7 @@ module.exports = {
         'smoke': '##f6f6f6',
       },
     },
-    extend: {},
+    },
   },
   plugins: [],
 }

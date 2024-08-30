@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @Component({
-  selector: 'app-menu-container',
+  selector: 'todolist-menu-container',
   standalone: true,
-  imports: [],
+  imports: [MenuItemComponent],
   templateUrl: './menu-container.component.html',
-  styleUrl: './menu-container.component.scss'
+  styleUrl: './menu-container.component.scss',
 })
 export class MenuContainerComponent {
-
+  @Input() selectedTab = 0;
 }

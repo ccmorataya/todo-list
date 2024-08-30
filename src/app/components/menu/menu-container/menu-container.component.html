@@ -1,1 +1,17 @@
-<p>menu-container works!</p>
+<div class="flex flex-row lg:flex-col justify-evenly py-3">
+  <todolist-menu-item
+    [title]="'TODAS'"
+    [routerLink]="'/all'"
+    [isSelected]="selectedTab === 0"
+  ></todolist-menu-item>
+  <todolist-menu-item
+    [title]="'COMPLETADAS'"
+    [routerLink]="'/completed'"
+    [isSelected]="selectedTab === 1"
+  ></todolist-menu-item>
+  <todolist-menu-item
+    [title]="'DESCARTADAS'"
+    [routerLink]="'/discarded'"
+    [isSelected]="selectedTab === 2"
+  ></todolist-menu-item>
+</div>

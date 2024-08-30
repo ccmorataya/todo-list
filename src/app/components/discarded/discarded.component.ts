@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { MenuContainerComponent } from '../menu/menu-container/menu-container.component';
 
 @Component({
-  selector: 'app-discarded',
+  selector: 'todolist-discarded',
   standalone: true,
-  imports: [],
+  imports: [MenuContainerComponent],
   templateUrl: './discarded.component.html',
-  styleUrl: './discarded.component.scss'
+  styleUrl: './discarded.component.scss',
 })
-export class DiscardedComponent {
-
-}
+export class DiscardedComponent {}

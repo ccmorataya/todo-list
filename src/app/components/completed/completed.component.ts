@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { MenuContainerComponent } from '../menu/menu-container/menu-container.component';
 
 @Component({
-  selector: 'app-completed',
+  selector: 'todolist-completed',
   standalone: true,
-  imports: [],
+  imports: [MenuContainerComponent],
   templateUrl: './completed.component.html',
-  styleUrl: './completed.component.scss'
+  styleUrl: './completed.component.scss',
 })
-export class CompletedComponent {
-
-}
+export class CompletedComponent {}
