@@ -2,10 +2,10 @@
   class="inset-0 flex items-center justify-center z-50 fixed bg-black bg-opacity-50"
 >
   <div
-    class="bg-white-pure shadow-lg p-5 bg-opacity-100 w-full lg:w-2/4 lg:h-3/4 flex flex-col justify-around font-bold"
+    class="bg-white-pure shadow-lg p-5 bg-opacity-100 w-full lg:w-2/4 lg:h-3/4 flex flex-col justify-around font-bold h-5/6"
   >
     <span class="text-xl">Añadir nueva tarea</span>
-    <form class="flex flex-col gap-3">
+    <form class="flex flex-col gap-3" [formGroup]="modalForm">
       <div class="flex flex-col">
         <label for="title">Título</label>
         <input
@@ -13,19 +13,23 @@
           type="text"
           class="border border-gray-300 p-2 w-full font-normal"
           placeholder="Qué tengo que hacer"
+          formControlName="title"
         />
       </div>
       <div class="flex flex-col">
         <label for="description">Descripción</label>
         <textarea
           id="description"
-          class="border border-gray-300 p-2 w-full h-full font-normal lg:h-[100px] resize"
+          class="border border-gray-300 p-2 w-full h-full font-normal lg:h-[100px] resize-y"
           placeholder="......"
+          formControlName="description"
         >
         </textarea>
       </div>
     </form>
-    <div class="flex flex-col lg:flex-row-reverse lg:justify-between gap-8">
+    <div
+      class="flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-8 gap-4"
+    >
       <button
         type="submit"
         (click)="addItem()"
@@ -41,5 +45,6 @@
         Cancelar
       </button>
     </div>
+    <!-- <pre>{{ modalForm.value.title }}</pre> -->
   </div>
 </div>
