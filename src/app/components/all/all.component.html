@@ -15,18 +15,13 @@
         <span class="text-gray-500">Agregar nueva tarea</span>
       </div>
     </button>
-    <todolist-todo-item
-      [title]="'test'"
-      [description]="'description'"
-    ></todolist-todo-item>
-    <!--     CM:: add todo items array
-    <div class="flex flex-col gap-3">
-      <todo-item
-        *ngFor="let todo of todoItems"
-        [todo]="todo"
-        (onToggle)="toggleTodo($event)"
-        (onRemove)="removeTodo($event)"
-      ></todo-item> -->
+    <div class="flex flex-col" *ngFor="let todo of todos">
+      <todolist-todo-item
+        *ngIf="todo.status === getStatus.TODO"
+        [title]="todo.title"
+        [description]="todo.description"
+      ></todolist-todo-item>
+    </div>
   </div>
 </div>
 

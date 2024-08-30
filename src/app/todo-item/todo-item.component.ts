@@ -12,6 +12,7 @@ import { faListCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 export class TodoItemComponent {
   @Input() title = '';
   @Input() description = '';
+  @Input() isCompletable = true;
 
   faListCheck = faListCheck;
   faTrash = faTrash;
