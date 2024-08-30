@@ -5,14 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-    colors: {
-      blue: {
-        'hyper': '#005fa0',
+      colors: {
+        blue: {
+          'hyper': '#005fa0',
+        },
+        white: {
+          'smoke': '##f6f6f6',
+        },
       },
-      white: {
-        'smoke': '##f6f6f6',
-      },
-    },
     },
   },
   plugins: [],
