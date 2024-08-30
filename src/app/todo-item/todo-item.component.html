@@ -1,0 +1,33 @@
+<div
+  class="flex flex-col border rounded-md lg:hover:border-blue-hyper"
+  (mouseenter)="showTrash = true"
+  (mouseleave)="showTrash = false"
+>
+  <div
+    class="flex flex-row items-center gap-3 bg-white-smoke border w-full h-full py-8 px-4 lg:py-6 relative"
+  >
+    <fa-icon [icon]="faListCheck" size="2xl"></fa-icon>
+    <fa-icon
+      *ngIf="showTrash"
+      [icon]="faTrash"
+      size="xl"
+      class="absolute right-3 top-3 cursor-pointer"
+    ></fa-icon>
+    <fa-icon
+      [icon]="faTrash"
+      size="xl"
+      class="absolute right-3 top-3 lg:hidden cursor-pointer"
+    ></fa-icon>
+    <span>{{ title }}</span>
+  </div>
+  <div
+    class="flex flex-col gap-3 px-4 py-4 justify-center lg:flex-row lg:items-center lg:justify-normal"
+  >
+    <span class="text-gray-500 lg:w-full">{{ description }}</span>
+    <button
+      class="border border-blue-hyper py-4 lg:py-2 lg:px-20 lg:justify-self-end"
+    >
+      COMPLETADO
+    </button>
+  </div>
+</div>

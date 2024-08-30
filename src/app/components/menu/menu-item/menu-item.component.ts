@@ -7,7 +7,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './menu-item.component.html',
-  styleUrl: './menu-item.component.scss',
 })
 export class MenuItemComponent {
   @Input() title = '';

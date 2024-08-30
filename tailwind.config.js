@@ -10,7 +10,7 @@ module.exports = {
           'hyper': '#005fa0',
         },
         white: {
-          'smoke': '##f6f6f6',
+          'smoke': '#f6f6f6',
         },
       },
     },

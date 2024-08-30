@@ -6,7 +6,6 @@ import { MenuItemComponent } from '../menu-item/menu-item.component';
   standalone: true,
   imports: [MenuItemComponent],
   templateUrl: './menu-container.component.html',
-  styleUrl: './menu-container.component.scss',
 })
 export class MenuContainerComponent {
   @Input() selectedTab = 0;

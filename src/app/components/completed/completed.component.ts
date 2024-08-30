@@ -6,6 +6,5 @@ import { MenuContainerComponent } from '../menu/menu-container/menu-container.co
   standalone: true,
   imports: [MenuContainerComponent],
   templateUrl: './completed.component.html',
-  styleUrl: './completed.component.scss',
 })
 export class CompletedComponent {}

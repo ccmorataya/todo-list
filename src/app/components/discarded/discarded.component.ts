@@ -6,6 +6,5 @@ import { MenuContainerComponent } from '../menu/menu-container/menu-container.co
   standalone: true,
   imports: [MenuContainerComponent],
   templateUrl: './discarded.component.html',
-  styleUrl: './discarded.component.scss',
 })
 export class DiscardedComponent {}
