@@ -6,14 +6,15 @@
     >
       <span>TODO LIST</span>
     </div>
-    <div
+    <button
       class="flex flex-col border rounded-md py-8 px-3 lg:py-6 cursor-pointer"
+      (click)="openModal()"
     >
       <div class="flex flex-row items-center gap-3">
         <fa-icon [icon]="faCirclePlus" size="2xl"></fa-icon>
         <span class="text-gray-500">Agregar nueva tarea</span>
       </div>
-    </div>
+    </button>
     <todolist-todo-item
       [title]="'test'"
       [description]="'description'"
@@ -28,3 +29,5 @@
       ></todo-item> -->
   </div>
 </div>
+
+<todolist-modal *ngIf="showModal" (close)="closeModal()"></todolist-modal>

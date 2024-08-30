@@ -1,1 +1,45 @@
-<p>modal works!</p>
+<div
+  class="inset-0 flex items-center justify-center z-50 fixed bg-black bg-opacity-50"
+>
+  <div
+    class="bg-white-pure shadow-lg p-5 bg-opacity-100 w-full lg:w-2/4 lg:h-3/4 flex flex-col justify-around font-bold"
+  >
+    <span class="text-xl">Añadir nueva tarea</span>
+    <form class="flex flex-col gap-3">
+      <div class="flex flex-col">
+        <label for="title">Título</label>
+        <input
+          id="title"
+          type="text"
+          class="border border-gray-300 p-2 w-full font-normal"
+          placeholder="Qué tengo que hacer"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="description">Descripción</label>
+        <textarea
+          id="description"
+          class="border border-gray-300 p-2 w-full h-full font-normal lg:h-[100px] resize"
+          placeholder="......"
+        >
+        </textarea>
+      </div>
+    </form>
+    <div class="flex flex-col lg:flex-row-reverse lg:justify-between gap-8">
+      <button
+        type="submit"
+        (click)="addItem()"
+        class="bg-blue-hyper text-white-pure font-bold py-2 px-4 rounded-sm w-full"
+      >
+        Agregar
+      </button>
+      <button
+        type="button"
+        (click)="toggleModal()"
+        class="bg-white-pure border border-blue-hyper font-bold py-2 px-4 rounded-sm w-full"
+      >
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>
