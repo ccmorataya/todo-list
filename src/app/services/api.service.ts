@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Todo } from '../models/todo.model';
@@ -8,6 +8,7 @@ import { Todo } from '../models/todo.model';
 })
 export class ApiService {
   http = inject(HttpClient);
+  headers = new HttpHeaders({ 'Content-type': 'application/json' });
 
   private baseUrl = 'https://66d21a5d62816af9a4f5d1c3.mockapi.io/task';
 
@@ -20,14 +21,14 @@ export class ApiService {
   }
 
   createTodo(todo: Todo): Observable<Todo> {
+    const title = `${todo.title} ${new Date().toISOString()}`;
+    todo.title = title;
     return this.http.post<Todo>(this.baseUrl, todo);
   }
 
   updateTodo(todo: Todo): Observable<Todo> {
-    return this.http.put<Todo>(`${this.baseUrl}/${todo.id}`, todo);
-  }
-
-  deleteTodo(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+    return this.http.put<Todo>(`${this.baseUrl}/${todo.id}`, todo, {
+      headers: this.headers,
+    });
   }
 }

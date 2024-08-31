@@ -34,47 +34,13 @@ export class AllComponent implements OnInit {
   ngOnInit(): void {
     this.api.getTodos().subscribe((todos) => {
       this.todos = todos;
+      console.log(todos);
     });
   }
 
   get getStatus() {
     return Status;
   }
-
-  /*   createTodo() {
-    if (this.todoForm.valid) {
-      const newTodo: Todo = this.todoForm.value;
-      this.datosService.createTodo(newTodo).subscribe(todo => {
-        this.todos.push(todo);
-        this.todoForm.reset();
-      });
-    }
-  }
-
-  updateTodo() {
-    if (this.todoForm.valid && this.editingId !== null) {
-      const updatedTodo: Todo = { ...this.todoForm.value, id: this.editingId };
-      this.datosService.updateTodo(updatedTodo).subscribe(todo => {
-        const index = this.todos.findIndex(t => t.id === todo.id);
-        this.todos[index] = todo;
-        this.editingId = null;
-        this.todoForm.reset();
-      });
-    }
-  }
-
-  deleteTodo(id: number) {
-    if (confirm('¿Estás seguro de eliminar este elemento?')) {
-      this.datosService.deleteTodo(id).subscribe(() => {
-        this.todos = this.todos.filter(todo => todo.id !== id);
-      });
-    }
-  }
-
-  editTodo(todo: Todo) {
-    this.editingId = todo.id;
-    this.todoForm.patchValue(todo);
-  } */
 
   openModal() {
     this.showModal = true;
